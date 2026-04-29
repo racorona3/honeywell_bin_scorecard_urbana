@@ -243,6 +243,57 @@ def build_html(d):
   .bg-yellow{{ background: var(--yellow); }} .bg-accent {{ background: var(--accent);  }}
   .bg-muted {{ background: var(--muted);  }}
 
+
+  .disclosure {{
+    background: linear-gradient(135deg, #0a2a4a 0%, #0d3561 100%);
+    border-top: 2px solid #1a5080;
+    padding: 16px 40px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }}
+  .disc-icon {{
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    margin-top: 1px;
+  }}
+  .disc-text {{
+    font-size: 10.5px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+  }}
+  .disc-prop {{
+    font-weight: 700;
+    color: rgba(255,255,255,0.95);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 10px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }}
+  .disc-divider {{
+    width: 1px;
+    background: rgba(255,255,255,0.18);
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: 0 4px;
+  }}
+
   .footer {{
     padding: 16px 40px; border-top: 1px solid var(--border);
     display: flex; justify-content: space-between;
@@ -466,6 +517,19 @@ def build_html(d):
     </div>
   </div>
 
+</div>
+
+
+<div class="disclosure">
+  <div class="disc-icon">&#9432;</div>
+  <div class="disc-text">
+    <span class="disc-prop">Proprietary</span>
+    The information contained herein is proprietary to The Boeing Company and shall not be reproduced or disclosed in whole or in part except when such user possesses direct written authorization from The Boeing Company.
+  </div>
+  <div class="disc-divider"></div>
+  <div class="disc-text">
+    The statements contained herein are based on good faith assumptions and are to be used for general information purposes only. These statements do not constitute an offer, promise, warranty or guarantee of performance.
+  </div>
 </div>
 
 <div class="footer">
